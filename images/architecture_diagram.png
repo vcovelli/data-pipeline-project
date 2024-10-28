@@ -1,0 +1,23 @@
++-----------------+          New File Upload            +-----------------+
+|      S3         | ----------------------------------> |      Lambda     |
+|  Raw Data Files |                                      | Data Loader     |
++-----------------+                                      +-----------------+
+                                                           |
+                                                           |
+                             Load Data into Snowflake      |
+                                                           |
+                                                     +------------------+
+                                                     |   Snowflake      |
+                         +-------------------------> |  Data Warehouse  |
+                         |                           |------------------|
+                         |                           |  Raw Data Table  |
+                         |                           | Transformed Table|
+                         +                           +------------------+
+                     Data Transformation                     |
+                      with dbt                               |
+                         +                                   |
+                         |                                   |
+                         +----------------------------------> |
+                                                       Connect to Tableau
+                                                     for Data Visualization
+
