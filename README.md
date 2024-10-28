@@ -55,7 +55,7 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 	---
 
 ### Prefect Deployment
-	```markdown
+
 	### Prefect Deployment
 
 	The flow is deployed to Prefect Cloud, where it can be monitored, scheduled, and run.
@@ -76,11 +76,8 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 
 Or, create the deployment manually in Prefect Cloud.
 
-	
-	---
-
 ### Running the Pipeline
-	```markdown
+
 	### Running the Pipeline
 
 	#### Local Run
@@ -90,16 +87,15 @@ Or, create the deployment manually in Prefect Cloud.
 	```bash
 	python3 data_pipeline.py
 
-Prefect Cloud Run
-1.Go to your Prefect Cloud dashboard.
-2.Locate the etl_data_pipeline flow.
-3.Manually trigger a run or set up a schedule for automated runs.
+	#### Prefect Cloud Run
+
+		1.Go to your Prefect Cloud dashboard.
+		2.Locate the etl_data_pipeline flow.
+		3.Manually trigger a run or set up a schedule for automated runs.
 	
 
-	---
-
 ### Scheduling the Pipeline
-	```markdown
+
 	### Scheduling the Pipeline
 
 	To automate the ETL pipeline, you can configure a schedule in Prefect Cloud.
