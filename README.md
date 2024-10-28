@@ -80,10 +80,10 @@ To test the pipeline locally, run:
 
 #### Prefect Cloud Run
 
-1.Go to your Prefect Cloud dashboard.
-2.Locate the etl_data_pipeline flow.
-3.Manually trigger a run or set up a schedule for automated runs.
-	
+1. Go to your **Prefect Cloud** dashboard.
+2. Locate the `etl_data_pipeline` flow.
+3. Manually trigger a run or set up a schedule for automated runs.
+
 
 ### Scheduling the Pipeline
 
