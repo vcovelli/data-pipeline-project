@@ -30,29 +30,31 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 
 #### 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/data-pipeline-project.git
-cd data-pipeline-project
+	```bash
+	git clone https://github.com/your-username/data-pipeline-project.git
+	cd data-pipeline-project
 
 #### 2. Install Dependencies
-Make sure to install Prefect and any other required libraries:
+	
+	Make sure to install Prefect and any other required libraries:
 
-pip install -r requirements.txt
+		pip install -r requirements.txt
 
-Note: If requirements.txt doesn’t exist yet, add it with the necessary packages (e.g., prefect, snowflake-connector-python).
+	Note: If requirements.txt doesn’t exist yet, add it with the necessary packages (e.g., prefect, snowflake-connector-python).
 
 #### 3. Configure Environment Variables (if needed)
-If your pipeline requires sensitive information (e.g., database credentials), store these in environment variables or Prefect Secrets.
+	
+	If your pipeline requires sensitive information (e.g., database credentials), store these in environment variables or Prefect Secrets.
 
-For example:
+	For example:
 
-export DB_USER="your_user"
-export DB_PASSWORD="your_password"
-export DB_ACCOUNT="your_account"
+		export DB_USER="your_user"
+		export DB_PASSWORD="your_password"
+		export DB_ACCOUNT="your_account"
 
 	---
 
-	### Prefect Deployment
+### Prefect Deployment
 	```markdown
 	### Prefect Deployment
 
@@ -77,7 +79,7 @@ Or, create the deployment manually in Prefect Cloud.
 	
 	---
 
-	### Running the Pipeline
+### Running the Pipeline
 	```markdown
 	### Running the Pipeline
 
@@ -96,7 +98,7 @@ Prefect Cloud Run
 
 	---
 
-	### Scheduling the Pipeline
+### Scheduling the Pipeline
 	```markdown
 	### Scheduling the Pipeline
 
