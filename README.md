@@ -35,17 +35,17 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 
 #### 2. Install Dependencies
 	
-	Make sure to install Prefect and any other required libraries:
+Make sure to install Prefect and any other required libraries:
 
 		pip install -r requirements.txt
 
-	Note: If requirements.txt doesn’t exist yet, add it with the necessary packages (e.g., prefect, snowflake-connector-python).
+Note: If requirements.txt doesn’t exist yet, add it with the necessary packages (e.g., prefect, snowflake-connector-python).
 
 #### 3. Configure Environment Variables (if needed)
 	
-	If your pipeline requires sensitive information (e.g., database credentials), store these in environment variables or Prefect Secrets.
+If your pipeline requires sensitive information (e.g., database credentials), store these in environment variables or Prefect Secrets.
 
-	For example:
+For example:
 
 		export DB_USER="your_user"
 		export DB_PASSWORD="your_password"
@@ -53,20 +53,18 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 
 ### Prefect Deployment
 
-	### Prefect Deployment
+The flow is deployed to Prefect Cloud, where it can be monitored, scheduled, and run.
 
-	The flow is deployed to Prefect Cloud, where it can be monitored, scheduled, and run.
+#### Deployment YAML
 
-	#### Deployment YAML
+The deployment configuration is located in `deployments/etl_data_pipeline.yaml`. This YAML file defines:
+- The flow to deploy (`etl_data_pipeline`)
+- Tags to help with organization in Prefect Cloud
+- An optional schedule for automated runs
 
-	The deployment configuration is located in `deployments/etl_data_pipeline.yaml`. This YAML file defines:
-	- The flow to deploy (`etl_data_pipeline`)
-	- Tags to help with organization in Prefect Cloud
-	- An optional schedule for automated runs
+#### Applying the Deployment
 
-	#### Applying the Deployment
-
-	To apply the deployment (if using the CLI):
+To apply the deployment (if using the CLI):
 
 	prefect deployment apply deployments/etl_data_pipeline.yaml
 
@@ -74,31 +72,27 @@ Or, create the deployment manually in Prefect Cloud.
 
 ### Running the Pipeline
 
-	### Running the Pipeline
+#### Local Run
 
-	#### Local Run
-
-	To test the pipeline locally, run:
+To test the pipeline locally, run:
 
 	python3 data_pipeline.py
 
-	#### Prefect Cloud Run
+#### Prefect Cloud Run
 
-		1.Go to your Prefect Cloud dashboard.
-		2.Locate the etl_data_pipeline flow.
-		3.Manually trigger a run or set up a schedule for automated runs.
+1.Go to your Prefect Cloud dashboard.
+2.Locate the etl_data_pipeline flow.
+3.Manually trigger a run or set up a schedule for automated runs.
 	
 
 ### Scheduling the Pipeline
 
-	### Scheduling the Pipeline
+To automate the ETL pipeline, you can configure a schedule in Prefect Cloud.
 
-	To automate the ETL pipeline, you can configure a schedule in Prefect Cloud.
+1. In the Prefect Cloud dashboard, navigate to **Deployments**.
+2. Select `etl_data_pipeline` and add a schedule (e.g., daily at 2 AM).
 
-	1. In the Prefect Cloud dashboard, navigate to **Deployments**.
-	2. Select `etl_data_pipeline` and add a schedule (e.g., daily at 2 AM).
-
-	Alternatively, define the schedule directly in the `etl_data_pipeline.yaml` file under the `schedule` field.
+Alternatively, define the schedule directly in the `etl_data_pipeline.yaml` file under the `schedule` field.
 
 
 ### Future Enhancements
