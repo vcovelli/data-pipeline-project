@@ -30,7 +30,6 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 
 #### 1. Clone the Repository
 
-	```bash
 	git clone https://github.com/your-username/data-pipeline-project.git
 	cd data-pipeline-project
 
@@ -52,8 +51,6 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 		export DB_PASSWORD="your_password"
 		export DB_ACCOUNT="your_account"
 
-	---
-
 ### Prefect Deployment
 
 	### Prefect Deployment
@@ -71,7 +68,6 @@ These tasks are orchestrated using Prefect, with the flow structure defined in `
 
 	To apply the deployment (if using the CLI):
 
-	```bash
 	prefect deployment apply deployments/etl_data_pipeline.yaml
 
 Or, create the deployment manually in Prefect Cloud.
@@ -84,7 +80,6 @@ Or, create the deployment manually in Prefect Cloud.
 
 	To test the pipeline locally, run:
 
-	```bash
 	python3 data_pipeline.py
 
 	#### Prefect Cloud Run
