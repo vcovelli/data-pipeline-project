@@ -1,0 +1,7 @@
+name: etl_data_pipeline
+flow_name: etl_data_pipeline
+schedule:
+  interval: "0 2 * * *"  # Runs daily at 2 AM
+parameters: {}  # You can define parameters here if your flow requires any
+tags: ["example", "etl"]
+
